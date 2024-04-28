@@ -1,13 +1,20 @@
 
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class homepage extends StatelessWidget {
+
+
+class Logout extends StatelessWidget {
 
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
     );
   }
+
 }

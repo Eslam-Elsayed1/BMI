@@ -1,20 +1,22 @@
 
 import 'package:flutter/material.dart';
 import 'package:hello_world/scrence/Dash_Board.dart';
-import 'package:hello_world/scrence/Home_page.dart';
+import 'package:hello_world/scrence/Logout.dart';
+import 'package:hello_world/scrence/Meals.dart';
+
 import 'package:hello_world/scrence/Setting.dart';
 
-class Home extends StatefulWidget {
+class icons extends StatefulWidget {
 
 
   @override
-  State<Home> createState() => icons();
+  State<icons> createState() => icon();
 }
 
-class icons extends State<Home> {
+class icon extends State<icons> {
   int currentindex=0;
-  final screens=[ homepage(),dashboard (),setting () ];
-  List<String> screentitle=['Home','Search','About','Settings'];
+  final screens=[Meals(),dashboard(), setting()];
+  List<String> screentitle=['Meals','DashBoard','Settings',];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,13 +36,7 @@ class icons extends State<Home> {
             type: BottomNavigationBarType.shifting,
             fixedColor: Colors.black,//if it is shifting
             iconSize: 30,
-            //if bottomnavigationbar is fixed and fixedcolor is off
-            // selectedItemColor: Colors.black,
-            // unselectedItemColor: Colors.white,
-            // selectedIconTheme: const IconThemeData(color: Colors.blueGrey),
-            // unselectedIconTheme: const IconThemeData(color: Colors.amber),
-            // selectedFontSize: 20,
-            // unselectedFontSize: 13,
+
             currentIndex: currentindex,
             landscapeLayout: BottomNavigationBarLandscapeLayout.spread,
             onTap: (value) {
@@ -50,9 +46,8 @@ class icons extends State<Home> {
               });
             },
             items: const[
-              BottomNavigationBarItem(backgroundColor: Colors.red, icon: Icon(Icons.home),label: 'Home'),
-              BottomNavigationBarItem(backgroundColor: Colors.teal, icon: Icon(Icons.search),label: 'Search'),
-              BottomNavigationBarItem(backgroundColor: Colors.indigo, icon: Icon(Icons.info),label: 'About'),
+              BottomNavigationBarItem(backgroundColor: Colors.green, icon: Icon(Icons.food_bank),label: 'Meals'),
+              BottomNavigationBarItem(backgroundColor: Colors.teal, icon: Icon(Icons.dashboard),label: 'DashBoard'),
               BottomNavigationBarItem(backgroundColor: Colors.purple, icon: Icon(Icons.settings),label: 'Settings')
             ]),
         body: IndexedStack(index: currentindex,children: screens,)

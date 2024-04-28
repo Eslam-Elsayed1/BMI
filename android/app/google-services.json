@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155280912764",
+    "project_id": "bmi22-1c69d",
+    "storage_bucket": "bmi22-1c69d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155280912764:android:2674aeed441f6e297ff4f9",
+        "android_client_info": {
+          "package_name": "com.example.caloriescounter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB249TKjKWDZ0XLJ-qjjbPUVe8yNXulJN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

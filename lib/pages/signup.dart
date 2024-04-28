@@ -1,14 +1,22 @@
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../icons.dart';
 
 
 class signup extends StatelessWidget {
 
 
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
+      backgroundColor: Colors.grey,
       body: Padding(
         padding: const EdgeInsets.only(
           left: 15.0,
@@ -23,7 +31,7 @@ class signup extends StatelessWidget {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    "assets/logo.png",
+                    "D:/caloriescounter/images/Sigin.png",
                   ),
                 ),
               ),
@@ -34,7 +42,7 @@ class signup extends StatelessWidget {
             Row(
               children: const [
                 Text(
-                  "Hesabınızı Oluşturun",
+                  "Sign up",
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -45,29 +53,31 @@ class signup extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const TextField(
+             TextField(
+
+              decoration: InputDecoration(
+                hintText: "Name",
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            TextField(
+
               decoration: InputDecoration(
                 hintText: "Email",
                 border: OutlineInputBorder(),
-              ),
+              )
             ),
             const SizedBox(
               height: 20,
             ),
-            const TextField(
+             TextField(
+
               obscureText: true,
               decoration: InputDecoration(
-                hintText: "Şifre",
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: "Şifre Tekrar",
+                hintText: "password",
                 border: OutlineInputBorder(),
               ),
             ),
@@ -81,29 +91,32 @@ class signup extends StatelessWidget {
                     MediaQuery.of(context).size.width / 1.1,
                     50,
                   )),
-              onPressed: () {},
-              child: const Text("Üye Ol"),
+              onPressed: (){},
+
+              child: const Text("log in"),
             ),
+
             const SizedBox(
               height: 20,
             ),
-            Row(
-              children: const [
-                Expanded(
-                  child: Divider(
-                    thickness: 1.5,
+             Row(
+                children: const [
+                  Expanded(
+                    child: Divider(
+                      thickness: 1.5,
+                    ),
                   ),
-                ),
-                SizedBox(width: 5),
-                Text("veya"),
-                SizedBox(width: 5),
-                Expanded(
-                  child: Divider(
-                    thickness: 1.5,
+                  SizedBox(width: 5),
+                  Text("by"),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: Divider(
+                      thickness: 1.5,
+                    ),
                   ),
-                ),
-              ],
-            ),
+                ],
+              ),
+
             const SizedBox(
               height: 20,
             ),
